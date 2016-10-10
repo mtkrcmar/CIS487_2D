@@ -1942,9 +1942,6 @@ MonoBehaviour:
   thrust: 50
   sthrust: 20
   boost: 50
-  isGasPressed: 0
-  isRightPressed: 0
-  isLeftPressed: 0
 --- !u!247 &1475417458
 ConstantForce2D:
   m_ObjectHideFlags: 0
@@ -1983,9 +1980,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.00000030517577, y: -0.23864555}
+  m_Offset: {x: 0.02, y: 0.01}
   serializedVersion: 2
-  m_Size: {x: 0.24447751, y: 0.0027085303}
+  m_Size: {x: 0.99, y: 1.44}
 --- !u!212 &1475417461
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2015,7 +2012,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300016, guid: f499c6c48a67f5a4599423d657575e9e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 086503d057851ae49aa54c0e0adb5e21, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2026,7 +2023,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1475417456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -538, y: 108, z: 0}
+  m_LocalPosition: {x: -533.9, y: 188.2, z: 0}
   m_LocalScale: {x: 150, y: 150, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
