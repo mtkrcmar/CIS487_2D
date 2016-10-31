@@ -6,7 +6,7 @@ public class RestartLevel : MonoBehaviour {
 	public int sceneInt;
 	// Use this for initialization
 	void Start () {
-		sceneInt = SceneManager.GetActiveScene ().buildIndex;
+		sceneInt = SceneManager.GetActiveScene().buildIndex;
 	
 	}
 	
