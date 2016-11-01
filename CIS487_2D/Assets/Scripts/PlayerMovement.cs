@@ -91,6 +91,15 @@ public class PlayerMovement : MonoBehaviour {
             rb.AddRelativeForce(transform.up*-thrust);
         }
 
+		Debug.Log (Upgrades.powerGasUpgrade );
+		if (Upgrades.powerGasUpgrade == 1) {// level 1
+			thrust= 1000;//from 70
+
+		}
+		if (Upgrades.powerGasUpgrade == 2) {// level 2
+			thrust= 1500;
+		}
+
     }
 
     public void OnPointerDownGasPressed()

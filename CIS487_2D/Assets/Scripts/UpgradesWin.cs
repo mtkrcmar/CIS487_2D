@@ -22,9 +22,11 @@ public class UpgradesWin : MonoBehaviour {
 	}
 
 	public void Clicked(){
-		if (on == false) {			 
+		if (on == false) {
+			Time.timeScale = 0f; //pause
 			on = true;
 		} else {
+			Time.timeScale = 1f; //unpause
 			on = false;
 		}
 	}

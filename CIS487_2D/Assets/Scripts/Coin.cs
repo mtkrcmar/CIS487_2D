@@ -13,7 +13,7 @@ public class Coin : MonoBehaviour {
 		coinEdge= GetComponent<CircleCollider2D>();
 		coinEdge.enabled= true;
 		coinObject.SetActive(true);
-
+		coinCount=99;//testing
 	}
 	
 	// Update is called once per frame

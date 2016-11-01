@@ -10,6 +10,7 @@ public class ExitToMainMenu : MonoBehaviour
     {
         if (Input.GetKey("escape"))
         {
+			Gas.gasAmount = 100;//reset gas
             SceneManager.LoadScene("MenuScene");
         }
 

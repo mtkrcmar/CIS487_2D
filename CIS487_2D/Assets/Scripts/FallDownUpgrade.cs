@@ -14,8 +14,11 @@ public class FallDownUpgrade : MonoBehaviour {
 	}
 
 	public void Clicked(){
+		if(Coin.coinCount>=3){
+			Coin.coinCount = Coin.coinCount - 3;	
 		Upgrades.fallFasterUpgrade = Upgrades.fallFasterUpgrade + 1;
 		if (Upgrades.fallFasterUpgrade > 1)
 			Upgrades.fallFasterUpgrade = 2;
+		}
 	}
 }
