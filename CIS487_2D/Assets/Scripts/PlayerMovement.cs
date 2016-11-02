@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour {
     public static float downThrust=50;
     public static Rigidbody2D rb;
     public int boost=50;
-    private bool isGasPressed = false;
+    private bool GasPressed = false;
     private bool isRightPressed = false;
     private bool isLeftPressed = false;
     private bool isLanded = true;
@@ -23,42 +23,39 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
-    // Update is called once per frame
-    void Update () {
-        /*  if (isGasPressed) { //Uses Gas
-              //rb.AddRelativeForce(Vector3.forward * thrust);
-              rb.AddRelativeForce(transform.up*thrust);
-              Gas.gasAmount = Gas.gasAmount - Gas.gasUsedAmount;
-          }
-          if (isRightPressed ) { 
-              //rb.AddRelativeForce (transform.right * sthrust);
-              transform.Rotate(Vector3.back * 90);
-          }
-          if (isLeftPressed ) {
-              //rb.AddRelativeForce(transform.right * -sthrust);
-              transform.Rotate(Vector3.forward);
-          }
-
-      */
-        if (!Input.GetKey ("space")) {
-            fireAni.SetActive(false);
-            gasSound.Stop ();
-        }
-
-        if ((Input.GetKey ("space"))&&Gas.gasAmount>0){ //SpaceBar For Gas
-
+    void FixedUpdate()
+    {
+        if (GasPressed)
+        {
             //Check if not pointing at thr ground, then thrust normally.
-            if (Vector3.Dot(transform.up, Vector3.down) > 0) 
+            if (Vector3.Dot(transform.up, Vector3.down) > 0)
             {
                 rb.AddRelativeForce(transform.up * -thrust + transform.right);
             }
-            
+
             // If pointing at the ground, thrust downwards.
             else
             {
                 rb.AddRelativeForce(transform.up * thrust + transform.right);
             }
+        }
 
+
+    }
+
+    // Update is called once per frame
+    void Update () {
+
+        GasPressed = Input.GetKey("space");
+
+
+        if (!GasPressed) {
+            fireAni.SetActive(false);
+            gasSound.Stop ();
+        }
+
+        if (GasPressed && Gas.gasAmount > 0){ //SpaceBar For Gas
+           
             Gas.gasAmount = Gas.gasAmount - Gas.gasUsedAmount;
             fireAni.SetActive(true);
 
@@ -91,41 +88,15 @@ public class PlayerMovement : MonoBehaviour {
             rb.AddRelativeForce(transform.up*-thrust);
         }
 
-		Debug.Log (Upgrades.powerGasUpgrade );
-		if (Upgrades.powerGasUpgrade == 1) {// level 1
-			thrust= 1000;//from 70
+        Debug.Log (Upgrades.powerGasUpgrade );
+        if (Upgrades.powerGasUpgrade == 1) {// level 1
+            thrust= 1000;//from 70
 
-		}
-		if (Upgrades.powerGasUpgrade == 2) {// level 2
-			thrust= 1500;
-		}
+        }
+        if (Upgrades.powerGasUpgrade == 2) {// level 2
+            thrust= 1500;
+        }
 
-    }
-
-    public void OnPointerDownGasPressed()
-    {
-        isGasPressed = true;
-    }
-    public void OnPointerUpGasPressed()
-    {
-        isGasPressed = false;
     }
 
-    public void OnPointerDownRightPressed()
-    {
-        isRightPressed = true;
-    }
-    public void OnPointerUpRightPressed()
-    {
-        isRightPressed = false;
-    }
-
-    public void OnPointerDownLeftPressed()
-    {
-        isLeftPressed = true;
-    }
-    public void OnPointerUpLeftPressed()
-    {
-        isLeftPressed = false;
-    }
 }
