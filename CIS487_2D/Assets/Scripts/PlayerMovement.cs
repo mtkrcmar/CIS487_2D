@@ -71,7 +71,11 @@ public class PlayerMovement : MonoBehaviour {
             }
 
         }
-    
+		if (Gas.gasAmount < 1) {
+			thrust = 0;
+			fireAni.SetActive (false);
+			gasSound.Stop ();
+		}
 
         if (Input.GetKey ("d") || Input.GetKey ("right")) { //D or Right Arrow for right
             //rb.AddRelativeForce (transform.right * sthrust);
