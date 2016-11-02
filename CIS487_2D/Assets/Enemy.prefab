@@ -37,14 +37,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010912172490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -200.20789, y: -2246.9827, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
+=======
+  m_LocalPosition: {x: -78.66962, y: -2313.6008, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+>>>>>>> b7be78b... Rodman11_1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+<<<<<<< HEAD
 --- !u!61 &61000013526562346
 BoxCollider2D:
+=======
+--- !u!68 &68000010099937914
+EdgeCollider2D:
+>>>>>>> b7be78b... Rodman11_1
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -52,11 +62,82 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -0.023981731, y: -0.2237142}
   serializedVersion: 2
   m_Size: {x: 1.2003133, y: 0.41689524}
+=======
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 0.031921387, y: 0.07910156}
+  - {x: 0.013336182, y: 2.4594727}
+--- !u!68 &68000011044230258
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010912172490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 0, y: 2.4592285}
+  - {x: 2.4829636, y: 2.4594727}
+--- !u!68 &68000011464533910
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010912172490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 2.4696274, y: 0.057861328}
+  - {x: 2.5170288, y: 2.425293}
+--- !u!68 &68000012489500920
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010912172490}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+  - {x: 0.017036438, y: 0.07470703}
+  - {x: 2.4829712, y: 0.07470703}
+--- !u!95 &95000012987116612
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010912172490}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 869032a27ae15ac44b552b750009c6ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+>>>>>>> b7be78b... Rodman11_1
 --- !u!114 &114000010031331454
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -68,7 +149,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3214f772e675215458f90bb7a41d6ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!114 &114000011961243410
+=======
+  bottomEdge: {fileID: 68000010099937914}
+  panel: {fileID: 0}
+--- !u!114 &114000011514663692
+>>>>>>> b7be78b... Rodman11_1
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -76,12 +163,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000010912172490}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: d1de5b3c44b5b554795057a35dae8ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startingPos: {x: 0, y: 0}
   scanSize: 25
   scanSpeed: 0.25
+=======
+  m_Script: {fileID: 11500000, guid: 3214f772e675215458f90bb7a41d6ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bottomEdge: {fileID: 0}
+  panel: {fileID: 1000010912172490}
+>>>>>>> b7be78b... Rodman11_1
 --- !u!212 &212000011881993218
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -110,8 +205,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+<<<<<<< HEAD
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 021531b5d5b324e409026deac4c81eb4, type: 3}
+=======
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 1d0c184845252df44a655359de388cb8, type: 3}
+>>>>>>> b7be78b... Rodman11_1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
